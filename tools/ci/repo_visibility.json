@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "defaults": {
+    "unknown_remotes_assume_public": true,
+    "always_forbidden_paths": [
+      "secrets/**",
+      "credentials/**",
+      "obsidian/Secrets/**",
+      "*.kdbx",
+      "*.key",
+      "*.token",
+      "*.pat",
+      "*.pem",
+      "*.p12",
+      "*.pfx",
+      "*.crt",
+      "*.cer",
+      ".env",
+      "auth.json"
+    ],
+    "public_block_paths": [
+      "obsidian/**",
+      ".studio/**",
+      "debug_logs/**",
+      "qa/**"
+    ]
+  },
+  "repos": [
+    {
+      "id": "godot-secrets-scan",
+      "root": "/home/brendan/hubsays-studio/godot-secrets-scan",
+      "expected_visibility": "public",
+      "public_remotes": [
+        "https://github.com/EspressoGuardian/godot-secrets-scan*",
+        "git@github.com:EspressoGuardian/godot-secrets-scan*",
+        "https://*@github.com/EspressoGuardian/godot-secrets-scan*"
+      ],
+      "private_remotes": [],
+      "allowed_paths": [
+        "README.md",
+        "secrets_scan.py",
+        "LICENSE",
+        "CODE_OF_CONDUCT.md",
+        "CONTRIBUTING.md",
+        ".gitignore",
+        ".gitattributes",
+        ".github/**",
+        ".githooks/**",
+        "docs/**",
+        "tools/**",
+        "scripts/**",
+        "src/**",
+        "assets/**"
+      ]
+    }
+  ]
+}
