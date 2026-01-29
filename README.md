@@ -29,9 +29,14 @@ python3 secrets_scan.py --mode tracked
 - **Privacy-First**: Keep credentials offline and out of history.
 - **Zero Dependencies**: Pure Python standard library.
 
-## Disclaimer
+## Safety & Support
 
-This software is provided "as is", without warranty of any kind. It is "vibe coded" and works effectively on my machine (TUXEDO OS / Linux), but may behave differently in other environments. Always verify scripts before running them in your critical workflows.
+This is a small tool I built for my own workflow and I’m sharing it in case it helps others.
+
+- **Tested on**: Linux (TUXEDO OS)
+- **Other platforms**: may work, but not regularly tested
+
+Please review scripts before running, and try them on non-critical data first.
 
 ## License
 
