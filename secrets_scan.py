@@ -33,6 +33,7 @@ SECRET_PATTERNS: List[Tuple[str, re.Pattern]] = [
     ("AWS_ACCESS_KEY_ID", re.compile(r"\bAKIA[0-9A-Z]{16}\b")),
     ("GOOGLE_API_KEY", re.compile(r"\bAIza[0-9A-Za-z\-_]{35}\b")),
     ("SLACK_TOKEN", re.compile(r"\bxox[baprs]-[0-9A-Za-z-]{10,48}\b")),
+    ("ABSOLUTE_PATH", re.compile(r"/home/[a-z]+/")),
     ("GENERIC_SECRET_ASSIGN", re.compile(
         r"(?i)\b(api[_-]?key|secret|token|password)\b\s*[:=]\s*[\"'][^\"']{12,}[\"']"
     )),
