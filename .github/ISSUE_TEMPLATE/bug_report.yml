@@ -1,0 +1,34 @@
+name: Bug report
+description: Create a report to help us improve
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug! Please fill out the information below.
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Describe the bug
+      description: A clear and concise description of what the bug is.
+      placeholder: |
+        godot-secrets-scan fails to detect [X] in [Y] file.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: How do we trigger this bug?
+      placeholder: |
+        1. Create a file with [X]
+        2. Run `python3 secrets_scan.py --mode staged`
+        3. Observe [Y]
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: OS version, Python version, Godot version (if applicable).
+      placeholder: Linux, Python 3.12, Godot 4.6

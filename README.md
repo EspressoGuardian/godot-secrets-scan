@@ -1,29 +1,24 @@
-# godot-secrets-scan
+# godot-secrets-scan 🔍
 
-PRE-staging PII & API key scanner for Godot projects (and others).
+**PRE-staging PII & API key scanner for Godot projects.**
 
-`godot-secrets-scan` is a lightweight Python script that prevents you from accidentally committing API keys, private keys, or PII. It is specifically pre-configured to handle common Godot file extensions like `.tscn`, `.tres`, and `.gd`.
+`godot-secrets-scan` is a lightweight Python script that prevents you from accidentally committing API keys, private keys, or PII. It is specifically pre-configured to handle common Godot text formats.
 
-## Features
+## Key Features
 
-- **Godot Focused**: Scans engine-specific text formats.
-- **Fast**: Only scans changed (staged) files by default.
-- **Safe**: Hard-blocks anything in a `secrets/` directory or with sensitive extensions (`.pem`, `.keystore`, etc).
-
-## Installation
-
-1. Copy `secrets_scan.py` to your project.
-2. Ensure you have Python 3 installed.
+- **Deterministic**: Focuses on staged files to catch leaks before they hit your history.
+- **Godot-Aware**: Scans `.tscn`, `.tres`, and `.gd` files for embedded credentials.
+- **Safe-by-Default**: Automatically blocks commits if files are detected in `secrets/` or have sensitive extensions.
 
 ## Usage
 
-Scan staged changes before commit (ideal for a pre-commit hook):
+Scan staged changes (perfect for a pre-commit hook):
 
 ```bash
 python3 secrets_scan.py --mode staged
 ```
 
-Audit the entire repository:
+Perform a full repository audit:
 
 ```bash
 python3 secrets_scan.py --mode tracked
@@ -31,8 +26,8 @@ python3 secrets_scan.py --mode tracked
 
 ## Principles
 
-- **Privacy First**: Keep your credentials out of git history.
-- **No Dependencies**: Standard library Python only.
+- **Privacy-First**: Keep credentials offline and out of history.
+- **Zero Dependencies**: Pure Python standard library.
 
 ## License
 
